@@ -17,4 +17,6 @@ EXPOSE 4443
 EXPOSE 8080
 EXPOSE 8081
 
+RUN chmod +x /*.sh
+
 CMD ["/server.sh"]
