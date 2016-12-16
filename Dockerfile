@@ -1,5 +1,5 @@
-FROM golang:1.7.1-alpine
-MAINTAINER hteen <i@hteen.cn>
+FROM golang:1.7.4-alpine
+MAINTAINER codeyu
 
 RUN apk add --no-cache git make openssl
 
