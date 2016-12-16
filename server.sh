@@ -6,6 +6,10 @@ if [ "${DOMAIN}" == "**None**" ]; then
     exit 1
 fi
 
+if [ ! -d "${MY_FILES}" ]; then
+  mkdir ${MY_FILES}
+fi
+
 if [ ! -f "${MY_FILES}/bin/ngrokd" ]; then
     echo "ngrokd is not build,will be build it now..."
     /bin/sh /build.sh
