@@ -6,8 +6,8 @@ if [ "${DOMAIN}" == "**None**" ]; then
     exit 1
 fi
 
-cd ${MY_FILES}
-if [ ! -f "${MY_FILES}/base.pem" ]; then
+cd ${NGROK_VOLUME}
+if [ ! -f "${NGROK_VOLUME}/base.pem" ]; then
     openssl genrsa -out base.key 2048
     openssl req -new -x509 -nodes -key base.key -days 10000 -subj "/CN=${DOMAIN}" -out base.pem
     openssl genrsa -out device.key 2048
@@ -26,6 +26,6 @@ GOOS=darwin GOARCH=386 make release-client
 GOOS=darwin GOARCH=amd64 make release-client
 GOOS=linux GOARCH=arm make release-client
 
-cp -r /ngrok/bin ${MY_FILES}/bin
+cp -r /ngrok/bin ${NGROK_VOLUME}/bin
 
 echo "build ok !"
