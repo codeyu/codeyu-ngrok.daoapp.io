@@ -8,7 +8,6 @@ fi
 
 if [ ! -d "${NGROK_VOLUME}" ]; then
     mkdir ${NGROK_VOLUME}
-    exit 1
 fi
 
 if [ ! -f "${NGROK_VOLUME}/bin/ngrokd" ]; then
