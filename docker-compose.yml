@@ -1,8 +1,8 @@
 server:
   image: codeyu/ngrok
   ports:
-    - "8082:80"
-    - "4432:443"
+    - "8080:8080"
+    - "8081:8081"
     - "4443:4443"
   volumes:
     - /data/ngrok:/myfiles
