@@ -7,7 +7,7 @@ RUN git clone https://github.com/codeyu/ngrok.git /ngrok
 
 ADD *.sh /
 
-ENV DOMAIN **None**
+ENV DOMAIN codeyu-ngrok.daoapp.io
 ENV MY_FILES /myfiles
 ENV TUNNEL_ADDR :4443
 ENV HTTP_ADDR :8080
