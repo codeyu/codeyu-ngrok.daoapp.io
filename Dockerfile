@@ -17,4 +17,4 @@ EXPOSE 4443
 EXPOSE 8080
 EXPOSE 8081
 
-CMD /bin/sh
+CMD ["/server.sh"]
