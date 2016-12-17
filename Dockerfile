@@ -7,17 +7,17 @@ RUN git clone https://github.com/codeyu/ngrok.git /ngrok
 
 ADD *.sh /
 
-ENV DOMAIN tenxapp.com
+ENV DOMAIN us.tenxapp.com
 ENV NGROK_VOLUME /app
-ENV TUNNEL_ADDR :4443
 ENV HTTP_ADDR :8080
 ENV HTTPS_ADDR :8081
+ENV TUNNEL_ADDR :4443
 
 VOLUME /app
 
-EXPOSE 4443
 EXPOSE 8080
 EXPOSE 8081
+EXPOSE 4443
 
 RUN chmod +x /*.sh
 
