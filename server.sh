@@ -7,7 +7,7 @@ if [ "${DOMAIN}" == "**None**" ]; then
 fi
 
 if [ ! -d "${NGROK_VOLUME}" ]; then
-    mkdir ${NGROK_VOLUME}
+    echo "Can't find Volume ${NGROK_VOLUME}"
 fi
 
 if [ ! -f "${NGROK_VOLUME}/bin/ngrokd" ]; then
